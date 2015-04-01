@@ -1,0 +1,11 @@
+[user]
+	email = scott@siberia.io
+	name = Scott Meyers
+[core]
+	excludesfile = ~/.gitignore_global
+[credential]
+	helper = osxkeychain
+[http]
+	cookiefile = ~/.gitcookies
+[pull]
+	rebase = false
