@@ -1,5 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General
+" General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 execute pathogen#infect()
 set nocompatible
@@ -25,7 +25,7 @@ nnoremap <C-e> :NERDTreeToggle<CR>
 set path+=**
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => MacVim Specific
+" MacVim
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("gui_macvim")
 	" Sets a light transparency
@@ -33,7 +33,7 @@ if has("gui_macvim")
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colors and Fonts
+" Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set Colorscheme
 " colorscheme gruvbox
@@ -65,7 +65,7 @@ set encoding=utf8
 set ffs=unix,dos,mac
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Files, backups and undo
+" Files, backups and undo
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Turn backup off, since most stuff is in SVN, git et.c anyway...
 set nobackup
@@ -77,7 +77,7 @@ let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php"
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Text, tab and indent related
+" Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use spaces instead of tabs
 filetype plugin indent on
@@ -103,7 +103,7 @@ set clipboard=unnamed
 autocmd FileType make setlocal noexpandtab nosmarttab shiftwidth=8 softtabstop=0 tabstop=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => VIM user interface
+" VIM UI
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7
@@ -180,7 +180,7 @@ set tm=500
 set foldcolumn=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Moving around, tabs, windows and buffers
+" Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
