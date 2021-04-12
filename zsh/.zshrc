@@ -7,6 +7,7 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias pg-start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias pg-stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
+alias server="npx http-server -c10"
 
 COMPLETION_WAITING_DOTS="true"
 
@@ -27,3 +28,12 @@ export PATH="/usr/local/opt/ruby/bin:/usr/local/lib/ruby/gems/2.6.0/bin/:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# The next line updates PATH for Netlify's Git Credential Helper.
+if [ -f '/Users/scottmeyers/.netlify/helper/path.zsh.inc' ]; then source '/Users/scottmeyers/.netlify/helper/path.zsh.inc'; fi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/scottmeyers/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/scottmeyers/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/scottmeyers/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/scottmeyers/google-cloud-sdk/completion.zsh.inc'; fi

@@ -1,7 +1,43 @@
-" using pathogen packages installed as submodules
-execute pathogen#infect()
+call plug#begin('~/dotfiles/vim/.vim/plugged')
+Plug 'https://github.com/mxw/vim-jsx'
+Plug 'https://github.com/elzr/vim-json'
+Plug 'https://github.com/w0rp/ale'
+Plug 'https://github.com/leafgarland/typescript-vim'
+Plug 'https://github.com/mattn/emmet-vim'
+Plug 'https://github.com/isRuslan/vim-es6'
+Plug 'https://github.com/kien/ctrlp.vim'
+Plug 'https://github.com/morhetz/gruvbox'
+Plug 'https://github.com/othree/html5.vim'
+Plug 'https://github.com/scrooloose/nerdtree'
+Plug 'https://github.com/tpope/vim-bundler'
+Plug 'https://github.com/pangloss/vim-javascript'
+Plug 'https://github.com/terryma/vim-multiple-cursors'
+Plug 'https://github.com/tpope/vim-surround'
+Plug 'https://github.com/bronson/vim-trailing-whitespace'
+Plug 'https://github.com/plasticboy/vim-markdown'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+Plug 'prettier/vim-prettier', {
+\ 'do': 'yarn install',
+\ 'branch': 'release/0.x',
+\ 'for': ['javascript', 'typescript', 'typescriptreact', 'javascriptreact']}
+call plug#end()
 
+let g:ale_fixers = {
+\  'javascript': ['prettier', 'eslint'],
+\  'typescript': ['prettier'],
+\  'scss': ['prettier'],
+\  'html': ['prettier'],
+\  'svelte': ['prettier']
+\}
+
+Plug 'morhetz/gruvbox'
+
+let g:ale_fix_on_save = 1
+let g:ale_completion_autoimport = 1
 let g:ale_linters = {'javascript': ['eslint']}
+
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
 
 " NERDTree
 " show hidden files
@@ -11,7 +47,9 @@ let NERDTreeIgnore = ['\.DS_Store$']
 " C-e to toggle
 nnoremap <C-e> :NERDTreeToggle<CR>
 
-colorscheme badwolf
+
+autocmd vimenter * ++nested colorscheme gruvbox
+" colorscheme badwolf
 
 filetype plugin indent on
 

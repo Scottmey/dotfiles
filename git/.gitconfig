@@ -2,10 +2,27 @@
 	email = scott@siberia.io
 	name = Scott Meyers
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = /Users/scottmeyers/.gitignore_global
 [credential]
 	helper = osxkeychain
 [http]
 	cookiefile = ~/.gitcookies
 [pull]
 	rebase = false
+[init]
+	defaultBranch = master
+[include]
+  path = /Users/scottmeyers/.netlify/helper/git-config
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/scottmeyers/.stCommitMsg
