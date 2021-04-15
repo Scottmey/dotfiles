@@ -1,23 +1,22 @@
 call plug#begin('~/dotfiles/vim/.vim/plugged')
-Plug 'mxw/vim-jsx'
-Plug 'elzr/vim-json'
-Plug 'w0rp/ale'
-Plug 'leafgarland/typescript-vim'
-Plug 'mattn/emmet-vim'
-Plug 'isRuslan/vim-es6'
-Plug 'kien/ctrlp.vim'
-Plug 'morhetz/gruvbox'
-Plug 'othree/html5.vim'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-bundler'
-Plug 'pangloss/vim-javascript'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-surround'
-Plug 'bronson/vim-trailing-whitespace'
-Plug 'tpope/vim-fireplace'
-Plug 'plasticboy/vim-markdown'
-Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'https://github.com/mxw/vim-jsx'
+Plug 'https://github.com/elzr/vim-json'
+Plug 'https://github.com/w0rp/ale'
+Plug 'https://github.com/leafgarland/typescript-vim'
+Plug 'https://github.com/mattn/emmet-vim'
+Plug 'https://github.com/isRuslan/vim-es6'
+Plug 'https://github.com/kien/ctrlp.vim'
+Plug 'https://github.com/morhetz/gruvbox'
+Plug 'https://github.com/othree/html5.vim'
+Plug 'https://github.com/scrooloose/nerdtree'
+Plug 'https://github.com/tpope/vim-bundler'
+Plug 'https://github.com/pangloss/vim-javascript'
+Plug 'https://github.com/terryma/vim-multiple-cursors'
+Plug 'https://github.com/tpope/vim-surround'
+Plug 'https://github.com/bronson/vim-trailing-whitespace'
+Plug 'https://github.com/plasticboy/vim-markdown'
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
+Plug 'https://github.com/kien/rainbow_parentheses.vim'
 Plug 'morhetz/gruvbox'
 Plug 'prettier/vim-prettier', {
 \ 'do': 'yarn install',
@@ -105,9 +104,3 @@ set guioptions-=L
 if has("gui_macvim")
 	set transparency=05
 endif
-
-" Activation based on file type
-augroup rainbow_lisp
-  autocmd!
-  autocmd FileType lisp,clojure,scheme RainbowParentheses
-augroup END
