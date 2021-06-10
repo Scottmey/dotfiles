@@ -1,0 +1,17 @@
+
+;; ----- smex-history -----
+(
+ load-theme
+ comment-or-uncomment-region
+ cd
+ 5x5
+ arp
+ dbx
+ dig
+)
+
+;; ----- smex-data -----
+(
+ (load-theme . 14)
+ (comment-or-uncomment-region . 2)
+)
