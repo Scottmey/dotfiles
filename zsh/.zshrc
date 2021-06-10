@@ -17,7 +17,7 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR='vim'
 
-export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_201, x86_64`
+#export JAVA_HOME=`/usr/libexec/java_home -v 1.8.0_201, x86_64`
 
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export PATH=".git/safe/../../bin:.git/safe/../../vendor/bundle/bin:$PATH"
